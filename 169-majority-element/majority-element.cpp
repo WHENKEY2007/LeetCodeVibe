@@ -1,13 +1,14 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
+    int majorityElement(vector<int>& nums)
+     {
         int n=nums.size();
-        unordered_map<int,int>freq;
-        for(auto x:nums){
-            freq[x]++;
+        unordered_map<int,int>mp;
+        for(int i=0;i<nums.size();i++){
+            mp[nums[i]]++;
         }
-        int ans=0;
-        for(auto i:freq){
+        int ans;
+        for(auto i:mp){ 
             if(i.second>n/2){
                 ans=i.first;
             }
