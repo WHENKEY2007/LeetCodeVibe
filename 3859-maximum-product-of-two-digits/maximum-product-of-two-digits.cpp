@@ -7,7 +7,6 @@ public:
             n/=10;
         }
         sort(v.begin(),v.end(),greater<int>());
-        int pr=v[0]*v[1];
-        return pr;
+        return v[0]*v[1];
     }
 };
