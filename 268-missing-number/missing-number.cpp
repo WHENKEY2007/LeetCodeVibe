@@ -1,15 +1,12 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        unordered_map<int,int>m;
+        int n=nums.size();
+        int actual=0;
+        int expected=n*(n+1)/2;
         for(int i:nums){
-            m[i]++;
+            actual+=i;
         }
-        for(auto i=0;i<=nums.size();i++){
-            if(!m.count(i)){
-                return i;
-            }
-        }
-        return 0;
+        return expected-actual;
     }
 };
