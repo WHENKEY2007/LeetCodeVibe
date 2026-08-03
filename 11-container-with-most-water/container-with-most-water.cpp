@@ -9,9 +9,10 @@ public:
             if(water>max){
                 max=water;
             }
-            if(height[l]<height[r]) l++;
-            else r--;
+        if(height[l]<height[r]) l++;
+        else r--;
+        
         }
-        return max;
+    return max;
     }
 };
